@@ -59,12 +59,15 @@ in
       terminal = {
         shell.program = "fish";
         # Use zed itself as editor for CLI tools that require an editor.
-        # The `--add` flag makes zed open the file in current workspace.
+        # `--add` flag makes zed open the file in current workspace.
+        # `--wait` flag makes zed don't exit until the file is closed
         env.VISUAL = "zeditor --add";
-        # For git commands like `git commit`, a `--wait` flag is needed to
-        # make the command wait for the given buffer to be closed.
         env.GIT_EDITOR = "zeditor --wait";
-        detect_venv = "off";
+        # Use option as meta to make some Alt keybindings work on macOS
+        option_as_meta = true;
+        # Fish is not POSIX-compliant requiring a distinct activation script
+        detect_venv.on.activate_script = "fish";
+        toolbar.breadcrumbs = false;
       };
 
       assistant.default_model = {
