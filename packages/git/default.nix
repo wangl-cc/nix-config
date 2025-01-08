@@ -26,7 +26,7 @@
     gba = "git branch -a";
     gbd = "git branch -d";
     gbl = "git branch -l";
-    gc = "git commit";
+    gc = "git commit -v";
     gcl = "git clone";
     gco = "git checkout";
     gcb = "git checkout -b";
