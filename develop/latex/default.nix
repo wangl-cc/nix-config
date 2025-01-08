@@ -5,7 +5,8 @@
 {
   home.packages = with pkgs; [
     texlab
-    tectonic
+    tectonic # a modern TeX engine, no need to install texlive
+    (texlive.withPackages (ps: [ ps.latexindent ])) # for format latex code
   ];
   programs.zed-editor = {
     extensions = [ "latex" ];
@@ -17,13 +18,6 @@
       binary.path = "${pkgs.texlab}/bin/texlab";
       settings.texlab = {
         latexindent.modifyLineBreaks = true;
-        # forwardSearch.executable = "/Applications/Skim.app/Contents/SharedSupport/displayline";
-        # forwardSearch.args = [
-        #   "-r"
-        #   "%l"
-        #   "%p"
-        #   "%f"
-        # ];
         build.onSave = true;
         build.executable = "${pkgs.tectonic}/bin/tectonic";
         build.args = [
