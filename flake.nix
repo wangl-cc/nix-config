@@ -53,7 +53,9 @@
         in
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { inherit system; };
-
+          extraSpecialArgs = {
+            hmConfigPath = "${homeDir}/.config/home-manager";
+          };
           modules = [
             # default configuration for home-manager
             {

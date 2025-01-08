@@ -23,9 +23,9 @@
     ++ builtins.map (path: ../../develop/${path}) [
       "julia"
       "latex"
-      "misc"
       "nix"
       "python"
       "rust"
+      "zed"
     ];
 }

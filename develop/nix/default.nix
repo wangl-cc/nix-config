@@ -5,7 +5,13 @@
 {
   home.packages = with pkgs; [
     nixd
-    nil
     nixfmt-rfc-style
   ];
+
+  programs.zed-editor = {
+    extensions = [ "nix" ];
+    userSettings.languages.Nix = {
+      language_servers = [ "nixd" ];
+    };
+  };
 }
