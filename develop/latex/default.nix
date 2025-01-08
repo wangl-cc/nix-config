@@ -13,6 +13,7 @@
     userSettings.languages.LaTeX = {
       preferred_line_length = 1000;
       soft_wrap = "editor_width";
+      hard_tabs = true;
     };
     userSettings.lsp.texlab = {
       binary.path = "${pkgs.texlab}/bin/texlab";
