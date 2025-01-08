@@ -1,5 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    dust
+  ];
   imports =
     builtins.map (path: ../../packages/${path}) [
       "atuin"
