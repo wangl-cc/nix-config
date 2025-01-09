@@ -16,7 +16,6 @@ in
     extensions = [
       "catppuccin"
       "git-firefly"
-      "typos"
       "wakatime"
     ];
     userSettings = {

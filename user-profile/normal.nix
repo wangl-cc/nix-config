@@ -46,6 +46,7 @@
       "python"
       "rust"
       "toml"
+      "typos"
       "zed"
     ];
 }
