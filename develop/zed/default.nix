@@ -42,6 +42,9 @@ in
       chat_panel.button = false;
       git.inline_blame.enabled = false;
 
+      node.path = "${pkgs.nodejs}/bin/node";
+      node.npm_path = "${pkgs.nodejs}/bin/npm";
+
       preferred_line_length = 80;
       wrap_guides = [ 80 ];
       tab_size = 2;
