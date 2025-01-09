@@ -24,6 +24,8 @@
 
   security.pam.enableSudoTouchIdAuth = true;
 
+  system.startup.chime = false;
+
   # Garbage Collection every moonday at 4:00
   nix.gc = {
     automatic = true;
