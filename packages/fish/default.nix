@@ -25,6 +25,8 @@
         expansion = "nix run nixpkgs#%";
         setCursor = true;
       };
+      # show differeces between home-manager generations
+      ndh = "nix profile diff-closures --profile ~/.local/state/nix/profiles/home-manager";
     };
     interactiveShellInit = ''
       set -g fish_key_bindings fish_vi_key_bindings
