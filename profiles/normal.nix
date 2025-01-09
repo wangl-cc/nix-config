@@ -29,6 +29,7 @@
       "nix"
       "python"
       "rust"
+      "toml"
       "zed"
     ];
 }

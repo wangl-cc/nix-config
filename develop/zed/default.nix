@@ -16,7 +16,6 @@ in
     extensions = [
       "catppuccin"
       "git-firefly"
-      "toml"
       "typos"
       "wakatime"
     ];
