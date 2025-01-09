@@ -1,1 +1,1 @@
-../../profiles/normal.nix
+../../user-profile/normal.nix
