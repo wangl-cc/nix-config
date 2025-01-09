@@ -22,6 +22,8 @@
   # enable nix-darwin integration with fish shell
   programs.fish.enable = true;
 
+  security.pam.enableSudoTouchIdAuth = true;
+
   # Garbage Collection every moonday at 4:00
   nix.gc = {
     automatic = true;
