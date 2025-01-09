@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }:
 
@@ -11,6 +12,12 @@
   users.users.loong = {
     home = "/Users/loong";
   };
+
+  fonts.packages = with pkgs; [
+    fira-code
+    nerd-fonts.fira-code
+    lora
+  ];
 
   # enable nix-darwin integration with fish shell
   programs.fish.enable = true;
