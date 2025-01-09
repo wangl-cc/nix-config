@@ -21,7 +21,6 @@
 
   imports =
     builtins.map (path: ../packages/${path}) [
-      "atuin"
       "bat"
       "delta"
       "eza"
